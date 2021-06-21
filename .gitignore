@@ -1,0 +1,79 @@
+
+# 忽略Unity临时目录
+/Library
+/obj
+/Temp
+/venv
+/Project
+
+# 忽略IDE相关
+/Assets/Plugins/Editor/JetBrains
+/Assets/Plugins/Editor/JetBrains.meta
+/Assets/Plugins/Editor.meta
+/.idea
+/.vs
+/.vscode
+/*.sln
+/*.csproj
+
+# 忽略日志
+/package__*.txt
+/patch__*.txt
+
+# 忽略xlua编译目录
+/xlua-2.1.12/build/build*
+/xlua-2.1.12/build/luac/build*
+###/Assets/XLua/Gen
+###/Assets/XLua/Gen.meta
+
+# 忽略wwise临时目录
+/VoxelProject_WwiseProject/.cache
+/VoxelProject_WwiseProject/IncrementalSoundBankData.xml
+/VoxelProject_WwiseProject/VoxelProject_WwiseProject.*.validationcache
+/Assets/Wwise/Editor/ProjectData
+/Assets/Wwise/Editor/ProjectData.meta
+
+# 忽略输出目录
+/Output
+
+# 忽略UWA测试数据目录
+/TestData
+
+# 忽略Memory Profiler临时目录
+/MemoryCaptures
+
+# 忽略工程中的临时目录
+/Assets/StreamingAssets
+/Assets/StreamingAssets.meta
+/Assets/AssetGraph
+/Assets/AssetGraph.meta
+/Assets/__TempAlphaTextures
+/Assets/__TempAlphaTextures.meta
+
+# 忽略CrashReporter的meta文件（历史原因）
+/Assets/Plugins/iOS/CrashReporter.framework/Versions/A/Headers/*.meta
+/Assets/Plugins/iOS/CrashReporter.framework/Versions/A/Resrouces/*.meta
+/Assets/Plugins/iOS/CrashReporter.framework/Versions/A/Headers.meta
+/Assets/Plugins/iOS/CrashReporter.framework/Versions/A/Resources.meta
+
+# 忽略工具临时目录和文件
+/Tools/InjectFixTemplateMonitor/Temp
+/Tools/LogServer/LogServer.pyc
+/Tools/LogServer/log.log
+/Tools/UnityAssetChecker/rule_report.yaml
+/Tools/UnityAssetChecker/assetcheck.log
+/Tools/AssetChecker/Temp
+/Tools/UnityEngineAnalyzer/report.json
+/Tools/UnityEngineAnalyzer/UnityReport.html
+/Tools/UnityEngineAnalyzer/config.json
+/Tools/UnityEngineAnalyzer/Source/.idea
+
+# 忽略工程中的用户目录，每个人可以放置自己的数据在这里，不会被上传
+!/Assets/__Users/
+/Assets/__Users/*
+!/Assets/__Users/Put your user data here (will not upload)
+!/Assets/__Users/Put your user data here (will not upload).meta
+!/TempData/
+/TempData/*
+!/TempData/Put your temp data here (will not upload)
+!/TempData/Put your temp data here (will not upload).meta

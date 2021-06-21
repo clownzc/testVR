@@ -1,0 +1,321 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1217134547851386}
+  m_IsPrefabParent: 1
+--- !u!1 &1217134547851386
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4213501848976414}
+  - component: {fileID: 114773103199157398}
+  - component: {fileID: 95570461409095350}
+  m_Layer: 0
+  m_Name: LowPolyBodyTemplate
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4213501848976414
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1217134547851386}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 223.39629, y: 34.93, z: 192.7813}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &95570461409095350
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1217134547851386}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114773103199157398
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1217134547851386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 921a065be96f28547a7d30302d28026c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarBodyBlock: {fileID: 1832214433033838, guid: b83b6efc505faae478a525f310ccef89,
+    type: 2}
+  UseDefaults: 0
+  Body:
+    Limbs:
+    - Name: Left Upper Arm
+      prefab: {fileID: 1737391378319554, guid: cd704c507c25a454790a80d581a6aeaa, type: 2}
+      Generate: 1
+      Stats:
+        PieceType: 0
+        FillCore: 1
+        Destructible: 0
+        FillHealth: 0
+        DestroyTime: 15.43
+        DestroyOnSleep: 0
+        CustomFill: {fileID: 0}
+        BuildPiece: {fileID: 1832214433033838, guid: b83b6efc505faae478a525f310ccef89,
+          type: 2}
+        PrefabSize: 1
+        Height: 5
+        Debth: 1
+        BuildType: 0
+        CircleX: 0
+        Offset: 0
+        SquareX: {x: 3, y: 3}
+    - Name: Left Lower Arm
+      prefab: {fileID: 1737391378319554, guid: cd704c507c25a454790a80d581a6aeaa, type: 2}
+      Generate: 1
+      Stats:
+        PieceType: 0
+        FillCore: 1
+        Destructible: 0
+        FillHealth: 1
+        DestroyTime: 10
+        DestroyOnSleep: 0
+        CustomFill: {fileID: 0}
+        BuildPiece: {fileID: 1832214433033838, guid: b83b6efc505faae478a525f310ccef89,
+          type: 2}
+        PrefabSize: 1
+        Height: 5
+        Debth: 1
+        BuildType: 0
+        CircleX: 0
+        Offset: 0
+        SquareX: {x: 3, y: 3}
+    - Name: Right Upper Arm
+      prefab: {fileID: 1737391378319554, guid: cd704c507c25a454790a80d581a6aeaa, type: 2}
+      Generate: 1
+      Stats:
+        PieceType: 0
+        FillCore: 1
+        Destructible: 0
+        FillHealth: 1
+        DestroyTime: 10
+        DestroyOnSleep: 0
+        CustomFill: {fileID: 0}
+        BuildPiece: {fileID: 1832214433033838, guid: b83b6efc505faae478a525f310ccef89,
+          type: 2}
+        PrefabSize: 1
+        Height: 5
+        Debth: 1
+        BuildType: 0
+        CircleX: 0
+        Offset: 0
+        SquareX: {x: 3, y: 3}
+    - Name: Right Lower Arm
+      prefab: {fileID: 1737391378319554, guid: cd704c507c25a454790a80d581a6aeaa, type: 2}
+      Generate: 1
+      Stats:
+        PieceType: 0
+        FillCore: 1
+        Destructible: 0
+        FillHealth: 1
+        DestroyTime: 10
+        DestroyOnSleep: 0
+        CustomFill: {fileID: 0}
+        BuildPiece: {fileID: 1832214433033838, guid: b83b6efc505faae478a525f310ccef89,
+          type: 2}
+        PrefabSize: 1
+        Height: 5
+        Debth: 1
+        BuildType: 0
+        CircleX: 0
+        Offset: 0
+        SquareX: {x: 3, y: 3}
+    - Name: Left Upper Leg
+      prefab: {fileID: 1737391378319554, guid: cd704c507c25a454790a80d581a6aeaa, type: 2}
+      Generate: 1
+      Stats:
+        PieceType: 0
+        FillCore: 1
+        Destructible: 0
+        FillHealth: 1
+        DestroyTime: 10
+        DestroyOnSleep: 0
+        CustomFill: {fileID: 0}
+        BuildPiece: {fileID: 1832214433033838, guid: b83b6efc505faae478a525f310ccef89,
+          type: 2}
+        PrefabSize: 1
+        Height: 7
+        Debth: 1
+        BuildType: 0
+        CircleX: 0
+        Offset: 0
+        SquareX: {x: 3, y: 3}
+    - Name: Left Lower Leg
+      prefab: {fileID: 1737391378319554, guid: cd704c507c25a454790a80d581a6aeaa, type: 2}
+      Generate: 1
+      Stats:
+        PieceType: 0
+        FillCore: 1
+        Destructible: 0
+        FillHealth: 1
+        DestroyTime: 10
+        DestroyOnSleep: 0
+        CustomFill: {fileID: 0}
+        BuildPiece: {fileID: 1832214433033838, guid: b83b6efc505faae478a525f310ccef89,
+          type: 2}
+        PrefabSize: 1
+        Height: 7
+        Debth: 1
+        BuildType: 0
+        CircleX: 0
+        Offset: 0
+        SquareX: {x: 3, y: 3}
+    - Name: Right Upper Leg
+      prefab: {fileID: 1737391378319554, guid: cd704c507c25a454790a80d581a6aeaa, type: 2}
+      Generate: 1
+      Stats:
+        PieceType: 0
+        FillCore: 1
+        Destructible: 0
+        FillHealth: 1
+        DestroyTime: 10
+        DestroyOnSleep: 0
+        CustomFill: {fileID: 0}
+        BuildPiece: {fileID: 1832214433033838, guid: b83b6efc505faae478a525f310ccef89,
+          type: 2}
+        PrefabSize: 1
+        Height: 7
+        Debth: 1
+        BuildType: 0
+        CircleX: 0
+        Offset: 0
+        SquareX: {x: 3, y: 3}
+    - Name: Right Lower Leg
+      prefab: {fileID: 1737391378319554, guid: cd704c507c25a454790a80d581a6aeaa, type: 2}
+      Generate: 1
+      Stats:
+        PieceType: 0
+        FillCore: 1
+        Destructible: 0
+        FillHealth: 1
+        DestroyTime: 10
+        DestroyOnSleep: 0
+        CustomFill: {fileID: 0}
+        BuildPiece: {fileID: 1832214433033838, guid: b83b6efc505faae478a525f310ccef89,
+          type: 2}
+        PrefabSize: 1
+        Height: 7
+        Debth: 1
+        BuildType: 0
+        CircleX: 0
+        Offset: 0
+        SquareX: {x: 3, y: 3}
+    Torso:
+    - Name: Lower Body
+      prefab: {fileID: 1384690493282048, guid: 8b557566fcb3be945bc2f932c4ebb772, type: 2}
+      Generate: 1
+      Stats:
+        PieceType: 1
+        FillCore: 1
+        Destructible: 0
+        FillHealth: 1
+        DestroyTime: 10
+        DestroyOnSleep: 0
+        CustomFill: {fileID: 0}
+        BuildPiece: {fileID: 1832214433033838, guid: b83b6efc505faae478a525f310ccef89,
+          type: 2}
+        PrefabSize: 1
+        Height: 6
+        Debth: 1
+        BuildType: 0
+        CircleX: 0
+        Offset: 0
+        SquareX: {x: 6, y: 6}
+    - Name: Upper Body
+      prefab: {fileID: 1825513461347398, guid: 6fcf7f0d0c907404eacf283e26dacee0, type: 2}
+      Generate: 1
+      Stats:
+        PieceType: 2
+        FillCore: 1
+        Destructible: 0
+        FillHealth: 1
+        DestroyTime: 10
+        DestroyOnSleep: 0
+        CustomFill: {fileID: 0}
+        BuildPiece: {fileID: 1832214433033838, guid: b83b6efc505faae478a525f310ccef89,
+          type: 2}
+        PrefabSize: 1
+        Height: 5
+        Debth: 1
+        BuildType: 0
+        CircleX: 0
+        Offset: 0
+        SquareX: {x: 7, y: 7}
+    Joints:
+    - Name: Left Shoulder
+      prefab: {fileID: 1076355875951338, guid: ea7dc016daae027439717dc3c5b7288e, type: 2}
+      Scale: 1
+    - Name: Left Elbow
+      prefab: {fileID: 1076355875951338, guid: ea7dc016daae027439717dc3c5b7288e, type: 2}
+      Scale: 1
+    - Name: Right Shoulder
+      prefab: {fileID: 1076355875951338, guid: ea7dc016daae027439717dc3c5b7288e, type: 2}
+      Scale: 1
+    - Name: Right Elbow
+      prefab: {fileID: 1076355875951338, guid: ea7dc016daae027439717dc3c5b7288e, type: 2}
+      Scale: 1
+    - Name: Left Hip
+      prefab: {fileID: 1076355875951338, guid: ea7dc016daae027439717dc3c5b7288e, type: 2}
+      Scale: 1
+    - Name: Left Knee
+      prefab: {fileID: 1076355875951338, guid: ea7dc016daae027439717dc3c5b7288e, type: 2}
+      Scale: 1
+    - Name: Right Hip
+      prefab: {fileID: 1076355875951338, guid: ea7dc016daae027439717dc3c5b7288e, type: 2}
+      Scale: 1
+    - Name: Right Knee
+      prefab: {fileID: 1076355875951338, guid: ea7dc016daae027439717dc3c5b7288e, type: 2}
+      Scale: 1
+    Hands:
+    - Name: Left Hand
+      prefab: {fileID: 1756200057490206, guid: 4220b006731efd748a3f80fbbf56771e, type: 2}
+      Scale: 1
+    - Name: Right Hand
+      prefab: {fileID: 1756200057490206, guid: 4220b006731efd748a3f80fbbf56771e, type: 2}
+      Scale: 1
+    Feet:
+    - Name: Left Foot
+      prefab: {fileID: 1378828900813670, guid: e019447dd9089714aba1940d03f83768, type: 2}
+      Scale: 1
+    - Name: Right Foot
+      prefab: {fileID: 1378828900813670, guid: e019447dd9089714aba1940d03f83768, type: 2}
+      Scale: 1
+    Head:
+      Name: Head
+      prefab: {fileID: 1406413185517450, guid: ac6f13c61e65d894bb2b056c876988aa, type: 2}
+      Scale: 1
+  TotalGenBlocks: 0
