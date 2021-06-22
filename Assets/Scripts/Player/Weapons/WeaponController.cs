@@ -8,38 +8,40 @@ using UnityEngine;
 public class WeaponController : MonoBehaviour
 {
     //可以选择的武器
-    private List<IShoot> m_shoots = new List<IShoot>();
+    [SerializeField]
+    private List<ShootBase> m_shoots;
 
     private int m_curSelectIndex;//当前选择的武器编号
 
-    private void Init()
+    public void Init()
     {
         //初始化可以使用的服务器
-    }
-
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Alpha1))
+        for(int i = 0; i < m_shoots.Count; ++i)
         {
-            SwitchShooter();
+            m_shoots[i].Init();
         }
     }
+
 
     /// <summary>
     /// 选择射击器
     /// </summary>
-    private void SwitchShooter()
+    public void SwitchShooter()
     {
+        m_shoots[m_curSelectIndex].DeactiveWeapon();
         ++m_curSelectIndex;
         if (m_curSelectIndex == m_shoots.Count)
         {
             m_curSelectIndex = 0;
         }
-        m_shoots[m_curSelectIndex].Switch();
+        m_shoots[m_curSelectIndex].ActiveWeapon();
     }
 
-    public void Shoot(Vector3 origin, Vector3 dir)
+    public void Shoot(Vector3 origin, Vector3 dest, GameObject target)
     {
-        m_shoots[m_curSelectIndex].Shoot(origin, dir);
+        if(m_shoots[m_curSelectIndex].CanShoot())
+        {
+            m_shoots[m_curSelectIndex].Shoot(origin, dest, target);
+        }       
     }
 }
