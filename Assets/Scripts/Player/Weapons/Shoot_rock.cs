@@ -20,16 +20,17 @@ public class Shoot_rock : ShootBase
         Debug.Log("ActiveWeapon rock!");
     }
 
-    public override void Shoot(Vector3 origin, Vector3 dest, GameObject target)
+    public override void OnPointUp(Vector3 origin, Vector3 dest, GameObject target)
     {
-        base.Shoot(origin, dest, target);
+        if (CanShoot() == false) return;
+        _curTime = 0;
         var cell = Instantiate(m_config.prefab, origin, Quaternion.identity);
         var bullect = cell.GetComponent<BulletBase>();
         var desc = new MoableDesc()
         {
             _origin = origin,
             _dest = dest,
-            _dir = Vector3.Normalize(dest + Vector3.up * 5 - origin),
+            _dir = Vector3.Normalize(dest  - origin),
             _speed = m_config.speed,
             _life = m_config.life,
             _collisionEnterCallback = OnHit
@@ -40,7 +41,6 @@ public class Shoot_rock : ShootBase
 
     private void OnHit(BulletBase bullect, Collision collision)
     {
-        Debug.Log($"Hit target :{collision.gameObject}");
         var breakAble = collision.collider.gameObject.GetComponent<BreakOnTime>();
         if (breakAble != null)
         {
@@ -64,7 +64,7 @@ public class Shoot_rock : ShootBase
                 rb.isKinematic = false;
                 var power = bullect.HasLife ? m_config.power - bullect.CurLife * m_config.powerDecayByTime : 0;
                 rb.AddExplosionForce(power, position, m_config.explosionRadius);
-                shard.gameObject.AddComponent<AutoDestruct>().Time = 10.0f;
+                //shard.gameObject.AddComponent<AutoDestruct>().Time = 10.0f;
             }
         }
     }

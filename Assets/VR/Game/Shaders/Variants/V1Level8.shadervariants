@@ -1,0 +1,390 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!200 &20000000
+ShaderVariantCollection:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: V1Level8
+  m_Shaders:
+    data:
+      first: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: DIRECTIONAL
+          passType: 4
+        - keywords: SHADOWS_DEPTH
+          passType: 8
+    data:
+      first: {fileID: 103, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 106, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: _SUNDISK_SIMPLE
+          passType: 0
+    data:
+      first: {fileID: 200, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 203, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 205, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+        - keywords: FOG_LINEAR
+          passType: 0
+    data:
+      first: {fileID: 207, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 9000, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 9001, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 9002, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 9003, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: 37f8d36ad04fc7d4288b50dd2e4d64b0, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 4
+        - keywords: _FOG
+          passType: 4
+        - keywords: FOG_LINEAR _FOG
+          passType: 4
+        - keywords: _FALLOFF _FOG
+          passType: 4
+        - keywords: FOG_LINEAR _FALLOFF _FOG
+          passType: 4
+    data:
+      first: {fileID: 4800000, guid: 3873e52022213174eb031aac70af4c72, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 4
+    data:
+      first: {fileID: 4800000, guid: 46f56ee5b0a202c408c79912d721d4c8, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+        - keywords: FOG_LINEAR
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: 47459d6bf2f4d014e924c0fa00778884, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: 6156e518ad076394eb359c0ab830098c, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: 73bee2dd11235664b9325e155ce4565f, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: 7ee73c6ac52640f49ab8ba81c57055f1, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 4
+        - keywords: _FALLOFF
+          passType: 4
+    data:
+      first: {fileID: 4800000, guid: 802fd2bfa3e82a04c951fccb4147859f, type: 3}
+      second:
+        variants:
+        - keywords: DIRECTIONAL DIRLIGHTMAP_COMBINED LIGHTMAP_ON
+          passType: 4
+        - keywords: DIRECTIONAL DIRLIGHTMAP_COMBINED LIGHTMAP_ON _EMISSION
+          passType: 4
+        - keywords: DIRECTIONAL _METAL
+          passType: 4
+        - keywords: DIRECTIONAL DIRLIGHTMAP_COMBINED LIGHTMAP_ON _METAL
+          passType: 4
+        - keywords: DIRECTIONAL FOG_LINEAR _METAL
+          passType: 4
+        - keywords: DIRECTIONAL FOG_LINEAR LIGHTMAP_ON _METAL
+          passType: 4
+        - keywords: DIRECTIONAL _EMISSION _METAL
+          passType: 4
+        - keywords: DIRECTIONAL FOG_LINEAR _EMISSION _METAL
+          passType: 4
+        - keywords: DIRECTIONAL FOG_LINEAR LIGHTMAP_ON _EMISSION _METAL
+          passType: 4
+        - keywords: DIRECTIONAL _8_POINT_LIGHT _DAYDREAM_FOG
+          passType: 4
+        - keywords: DIRECTIONAL DIRLIGHTMAP_COMBINED LIGHTMAP_ON _8_POINT_LIGHT _DAYDREAM_FOG
+          passType: 4
+        - keywords: DIRECTIONAL _8_POINT_LIGHT _DAYDREAM_FOG _EMISSION
+          passType: 4
+        - keywords: DIRECTIONAL DIRLIGHTMAP_COMBINED LIGHTMAP_ON _8_POINT_LIGHT _DAYDREAM_FOG
+            _EMISSION
+          passType: 4
+        - keywords: DIRECTIONAL _8_POINT_LIGHT _DAYDREAM_FOG _METAL
+          passType: 4
+        - keywords: DIRECTIONAL DIRLIGHTMAP_COMBINED LIGHTMAP_ON _8_POINT_LIGHT _DAYDREAM_FOG
+            _METAL
+          passType: 4
+        - keywords: DIRECTIONAL _8_POINT_LIGHT _DAYDREAM_FOG _EMISSION _METAL
+          passType: 4
+        - keywords: DIRECTIONAL DIRLIGHTMAP_COMBINED LIGHTMAP_ON _8_POINT_LIGHT _DAYDREAM_FOG
+            _EMISSION _METAL
+          passType: 4
+        - keywords: DIRECTIONAL DIRLIGHTMAP_COMBINED LIGHTMAP_ON _8_POINT_LIGHT _ANIM
+            _DAYDREAM_FOG _EMISSION
+          passType: 4
+        - keywords: DIRECTIONAL DIRLIGHTMAP_COMBINED LIGHTMAP_ON _8_POINT_LIGHT _ANIM
+            _DAYDREAM_FOG _EMISSION _METAL
+          passType: 4
+        - keywords: DIRECTIONAL _8_POINT_LIGHT _DAYDREAM_FOG _VERTEX_LIGHT
+          passType: 4
+        - keywords: DIRECTIONAL DIRLIGHTMAP_COMBINED LIGHTMAP_ON _8_POINT_LIGHT _DAYDREAM_FOG
+            _VERTEX_LIGHT
+          passType: 4
+        - keywords: DIRECTIONAL _8_POINT_LIGHT _DAYDREAM_FOG _METAL _VERTEX_LIGHT
+          passType: 4
+        - keywords: DIRECTIONAL DIRLIGHTMAP_COMBINED LIGHTMAP_ON _8_POINT_LIGHT _DAYDREAM_FOG
+            _METAL _VERTEX_LIGHT
+          passType: 4
+        - keywords: DIRECTIONAL _4_POINT_LIGHT
+          passType: 4
+        - keywords: DIRECTIONAL DIRLIGHTMAP_COMBINED LIGHTMAP_ON _4_POINT_LIGHT
+          passType: 4
+        - keywords: DIRECTIONAL _4_POINT_LIGHT _EMISSION
+          passType: 4
+        - keywords: DIRECTIONAL DIRLIGHTMAP_COMBINED LIGHTMAP_ON _4_POINT_LIGHT _EMISSION
+          passType: 4
+        - keywords: DIRECTIONAL _4_POINT_LIGHT _METAL
+          passType: 4
+        - keywords: DIRECTIONAL DIRLIGHTMAP_COMBINED LIGHTMAP_ON _4_POINT_LIGHT _METAL
+          passType: 4
+        - keywords: DIRECTIONAL _4_POINT_LIGHT _EMISSION _METAL
+          passType: 4
+        - keywords: DIRECTIONAL DIRLIGHTMAP_COMBINED LIGHTMAP_ON _4_POINT_LIGHT _EMISSION
+            _METAL
+          passType: 4
+        - keywords: DIRECTIONAL DIRLIGHTMAP_COMBINED LIGHTMAP_ON _4_POINT_LIGHT _ANIM
+            _EMISSION
+          passType: 4
+        - keywords: DIRECTIONAL DIRLIGHTMAP_COMBINED LIGHTMAP_ON _4_POINT_LIGHT _ANIM
+            _EMISSION _METAL
+          passType: 4
+        - keywords: DIRECTIONAL _4_POINT_LIGHT _VERTEX_LIGHT
+          passType: 4
+        - keywords: DIRECTIONAL DIRLIGHTMAP_COMBINED LIGHTMAP_ON _4_POINT_LIGHT _VERTEX_LIGHT
+          passType: 4
+        - keywords: DIRECTIONAL _4_POINT_LIGHT _METAL _VERTEX_LIGHT
+          passType: 4
+        - keywords: DIRECTIONAL DIRLIGHTMAP_COMBINED LIGHTMAP_ON _4_POINT_LIGHT _METAL
+            _VERTEX_LIGHT
+          passType: 4
+        - keywords: DIRECTIONAL DIRLIGHTMAP_COMBINED LIGHTMAP_ON _4_POINT_LIGHT _ANIM
+            _EMISSION _VERTEX_LIGHT
+          passType: 4
+        - keywords: DIRECTIONAL DIRLIGHTMAP_COMBINED LIGHTMAP_ON _4_POINT_LIGHT _ANIM
+            _EMISSION _METAL _VERTEX_LIGHT
+          passType: 4
+        - keywords: DIRECTIONAL _4_POINT_LIGHT _FRESNEL _METAL
+          passType: 4
+        - keywords: DIRECTIONAL DIRLIGHTMAP_COMBINED LIGHTMAP_ON _4_POINT_LIGHT _ANIM
+            _EMISSION _FRESNEL _METAL
+          passType: 4
+        - keywords: DIRECTIONAL _4_POINT_LIGHT _DAYDREAM_FOG _DAYDREAM_HEIGHT_FOG
+          passType: 4
+        - keywords: DIRECTIONAL DIRLIGHTMAP_COMBINED LIGHTMAP_ON _4_POINT_LIGHT _DAYDREAM_FOG
+            _DAYDREAM_HEIGHT_FOG
+          passType: 4
+        - keywords: DIRECTIONAL _4_POINT_LIGHT _DAYDREAM_FOG _DAYDREAM_HEIGHT_FOG
+            _EMISSION
+          passType: 4
+        - keywords: DIRECTIONAL DIRLIGHTMAP_COMBINED LIGHTMAP_ON _4_POINT_LIGHT _DAYDREAM_FOG
+            _DAYDREAM_HEIGHT_FOG _EMISSION
+          passType: 4
+        - keywords: DIRECTIONAL _4_POINT_LIGHT _DAYDREAM_FOG _DAYDREAM_HEIGHT_FOG
+            _METAL
+          passType: 4
+        - keywords: DIRECTIONAL DIRLIGHTMAP_COMBINED LIGHTMAP_ON _4_POINT_LIGHT _DAYDREAM_FOG
+            _DAYDREAM_HEIGHT_FOG _METAL
+          passType: 4
+        - keywords: DIRECTIONAL _4_POINT_LIGHT _DAYDREAM_FOG _DAYDREAM_HEIGHT_FOG
+            _VERTEX_LIGHT
+          passType: 4
+        - keywords: DIRECTIONAL DIRLIGHTMAP_COMBINED LIGHTMAP_ON _4_POINT_LIGHT _DAYDREAM_FOG
+            _DAYDREAM_HEIGHT_FOG _VERTEX_LIGHT
+          passType: 4
+        - keywords: DIRECTIONAL _4_POINT_LIGHT _DAYDREAM_FOG _DAYDREAM_HEIGHT_FOG
+            _METAL _VERTEX_LIGHT
+          passType: 4
+        - keywords: DIRECTIONAL DIRLIGHTMAP_COMBINED LIGHTMAP_ON _4_POINT_LIGHT _DAYDREAM_FOG
+            _DAYDREAM_HEIGHT_FOG _METAL _VERTEX_LIGHT
+          passType: 4
+        - keywords: FOG_LINEAR SPOT _METAL
+          passType: 5
+        - keywords: SHADOWS_DEPTH
+          passType: 8
+    data:
+      first: {fileID: 4800000, guid: 8ce0f28a45729d9409a313a32061f283, type: 3}
+      second:
+        variants:
+        - keywords: DIRECTIONAL
+          passType: 4
+        - keywords: DIRECTIONAL _DAYDREAM_FOG
+          passType: 4
+    data:
+      first: {fileID: 4800000, guid: 92dabb4b48648d747978681177648fe1, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: bb46760549aa5014697e05ab05cf5e6c, type: 3}
+      second:
+        variants:
+        - keywords: DIRECTIONAL _EMISSION _FOG _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL _EMISSION _METALLICGLOSSMAP _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL FOG_LINEAR _EMISSION _METALLICGLOSSMAP _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL _EMISSION _FOG _METALLICGLOSSMAP _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL _8_POINT_LIGHT _EMISSION _METALLICGLOSSMAP _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL _8_POINT_LIGHT _EMISSION _METALLICGLOSSMAP _NORMALMAP
+            _VERTEX_LIGHT
+          passType: 4
+        - keywords: DIRECTIONAL _8_POINT_LIGHT _EMISSION _FOG _METALLICGLOSSMAP _NORMALMAP
+            _VERTEX_LIGHT
+          passType: 4
+        - keywords: DIRECTIONAL _EMISSION _FOG _FRESNEL
+          passType: 4
+        - keywords: DIRECTIONAL _EMISSION _FRESNEL _METALLICGLOSSMAP _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL FOG_LINEAR _EMISSION _FRESNEL _METALLICGLOSSMAP _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL _EMISSION _FOG _FRESNEL _METALLICGLOSSMAP _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL FOG_LINEAR _EMISSION _FOG _FRESNEL _METALLICGLOSSMAP
+            _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL _8_POINT_LIGHT _EMISSION _FOG _FRESNEL _METALLICGLOSSMAP
+            _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL _ALPHAPREMULTIPLY_ON _EMISSION _FOG _FRESNEL _FRESNEL_ALPHA
+            _METALLICGLOSSMAP _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL _8_POINT_LIGHT _ALPHAPREMULTIPLY_ON _EMISSION _FRESNEL
+            _FRESNEL_ALPHA _METALLICGLOSSMAP _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL _8_POINT_LIGHT _ALPHATEST_ON _EMISSION _FOG _METALLICGLOSSMAP
+            _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL _8_POINT_LIGHT _ALPHATEST_ON _EMISSION _FOG _METALLICGLOSSMAP
+            _NORMALMAP _VERTEX_LIGHT
+          passType: 4
+        - keywords: DIRECTIONAL _ALPHATEST_ON _EMISSION _FOG _FRESNEL _METALLICGLOSSMAP
+            _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL FOG_LINEAR _EMISSION _EMISSION_MASK _METALLICGLOSSMAP
+            _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL FOG_LINEAR _EMISSION _EMISSION_MASK _FOG _METALLICGLOSSMAP
+            _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL _8_POINT_LIGHT _EMISSION _EMISSION_MASK _METALLICGLOSSMAP
+            _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL _8_POINT_LIGHT _EMISSION _EMISSION_MASK _FOG _METALLICGLOSSMAP
+            _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL _4_POINT_LIGHT _EMISSION _FOG _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL _4_POINT_LIGHT _EMISSION _METALLICGLOSSMAP _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL _4_POINT_LIGHT _EMISSION _FOG _METALLICGLOSSMAP _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL _4_POINT_LIGHT _EMISSION _FOG _FRESNEL
+          passType: 4
+        - keywords: DIRECTIONAL _4_POINT_LIGHT _EMISSION _FOG _FRESNEL _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL _4_POINT_LIGHT _EMISSION _FOG _FRESNEL _METALLICGLOSSMAP
+            _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL _4_POINT_LIGHT _ALPHATEST_ON _EMISSION _FOG _METALLICGLOSSMAP
+            _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL _4_POINT_LIGHT _ALPHATEST_ON _EMISSION _FOG _FRESNEL
+            _METALLICGLOSSMAP _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL _4_POINT_LIGHT _EMISSION _EMISSION_MASK _METALLICGLOSSMAP
+            _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL _4_POINT_LIGHT _EMISSION _EMISSION_MASK _FOG _METALLICGLOSSMAP
+            _NORMALMAP
+          passType: 4
+        - keywords: SHADOWS_DEPTH
+          passType: 8
+    data:
+      first: {fileID: 4800000, guid: f7264afbb8b364c4ab08c2208c8e9400, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 4
+        - keywords: FOG_LINEAR
+          passType: 4
+        - keywords: _Fog
+          passType: 4

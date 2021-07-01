@@ -21,7 +21,6 @@ public class BulletRock : BulletBase
 
     public void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Hit!");
         _desc._collisionEnterCallback(this, collision);
     }
 }

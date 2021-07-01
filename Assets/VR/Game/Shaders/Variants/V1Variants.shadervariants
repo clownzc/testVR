@@ -1,0 +1,264 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!200 &20000000
+ShaderVariantCollection:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: V1Variants
+  m_Shaders:
+    data:
+      first: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_LINEAR LIGHTMAP_OFF
+          passType: 4
+        - keywords: SHADOWS_DEPTH
+          passType: 8
+    data:
+      first: {fileID: 106, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: UNITY_COLORSPACE_GAMMA _SUNDISK_SIMPLE
+          passType: 0
+    data:
+      first: {fileID: 200, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: FOG_LINEAR
+          passType: 0
+    data:
+      first: {fileID: 203, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: FOG_LINEAR
+          passType: 0
+    data:
+      first: {fileID: 205, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: FOG_LINEAR
+          passType: 0
+    data:
+      first: {fileID: 207, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 9000, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 9001, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 9002, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 9003, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: 06aa46b8e43675d43b204c3638e59767, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: 08500756c26ace645b699ca51eab71ca, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: 37f8d36ad04fc7d4288b50dd2e4d64b0, type: 3}
+      second:
+        variants:
+        - keywords: _FOG
+          passType: 4
+        - keywords: FOG_LINEAR _FOG
+          passType: 4
+    data:
+      first: {fileID: 4800000, guid: 46f56ee5b0a202c408c79912d721d4c8, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+        - keywords: FOG_LINEAR
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: 47459d6bf2f4d014e924c0fa00778884, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: 6156e518ad076394eb359c0ab830098c, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: 67ee2e53086414fbbab2a5edbd544629, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: 73bee2dd11235664b9325e155ce4565f, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: 7605cadd8fd7498438bf1f0dfdfe9a6d, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: 77980df41ee245241ae55f30a5a6884e, type: 3}
+      second:
+        variants:
+        - keywords: FOG_LINEAR
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: 7ee73c6ac52640f49ab8ba81c57055f1, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 4
+        - keywords: _BEAM _FALLOFF
+          passType: 4
+    data:
+      first: {fileID: 4800000, guid: 802fd2bfa3e82a04c951fccb4147859f, type: 3}
+      second:
+        variants:
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF LIGHTMAP_ON
+          passType: 4
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_LINEAR LIGHTMAP_ON
+          passType: 4
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF LIGHTMAP_ON _METAL
+          passType: 4
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_LINEAR LIGHTMAP_ON _METAL
+          passType: 4
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF LIGHTMAP_ON _EMISSION _NORMAL
+          passType: 4
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_LINEAR LIGHTMAP_ON _EMISSION
+            _NORMAL
+          passType: 4
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF LIGHTMAP_OFF _METAL _NORMAL
+          passType: 4
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF LIGHTMAP_ON _METAL _NORMAL
+          passType: 4
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_LINEAR LIGHTMAP_OFF _METAL
+            _NORMAL
+          passType: 4
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_LINEAR LIGHTMAP_ON _METAL
+            _NORMAL
+          passType: 4
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF LIGHTMAP_ON _EMISSION _METAL _NORMAL
+          passType: 4
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_LINEAR LIGHTMAP_OFF _EMISSION
+            _METAL _NORMAL
+          passType: 4
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_LINEAR LIGHTMAP_ON _EMISSION
+            _METAL _NORMAL
+          passType: 4
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF LIGHTMAP_OFF _METAL _NORMAL _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF LIGHTMAP_ON _METAL _NORMAL _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_LINEAR LIGHTMAP_OFF _METAL
+            _NORMAL _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_LINEAR LIGHTMAP_ON _METAL
+            _NORMAL _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF LIGHTMAP_ON _EMISSION _METAL _NORMAL
+            _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_LINEAR LIGHTMAP_ON _EMISSION
+            _METAL _NORMAL _NORMALMAP
+          passType: 4
+        - keywords: SHADOWS_DEPTH
+          passType: 8
+    data:
+      first: {fileID: 4800000, guid: 92dabb4b48648d747978681177648fe1, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: adb9b18ac2466473a850d8acd17654a1, type: 3}
+      second:
+        variants:
+        - keywords: FOG_LINEAR
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: bb46760549aa5014697e05ab05cf5e6c, type: 3}
+      second:
+        variants:
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF LIGHTMAP_OFF _EMISSION _METALLICGLOSSMAP
+            _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_LINEAR LIGHTMAP_OFF _EMISSION
+            _METALLICGLOSSMAP _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF LIGHTMAP_OFF _EMISSION _FRESNEL
+            _METALLICGLOSSMAP _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_LINEAR LIGHTMAP_OFF _EMISSION
+            _FRESNEL _METALLICGLOSSMAP _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF LIGHTMAP_OFF _EMISSION _FOG _FRESNEL
+            _METALLICGLOSSMAP _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_LINEAR LIGHTMAP_OFF _EMISSION
+            _FOG _FRESNEL _METALLICGLOSSMAP _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_LINEAR LIGHTMAP_OFF _EMISSION
+            _EMISSION_MASK _METALLICGLOSSMAP _NORMALMAP
+          passType: 4
+        - keywords: DIRECTIONAL DYNAMICLIGHTMAP_OFF FOG_LINEAR LIGHTMAP_OFF _EMISSION
+            _EMISSION_MASK _FOG _METALLICGLOSSMAP _NORMALMAP
+          passType: 4
+    data:
+      first: {fileID: 4800000, guid: beaebe8e7b47e4c0b93b51fad8fb14a2, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 0
+        - keywords: FOG_LINEAR
+          passType: 0
+    data:
+      first: {fileID: 4800000, guid: c796097a1033f324b9f19efee948369f, type: 3}
+      second:
+        variants:
+        - keywords: 
+          passType: 4
+        - keywords: FOG_LINEAR
+          passType: 4

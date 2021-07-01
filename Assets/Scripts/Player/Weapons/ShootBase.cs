@@ -25,9 +25,16 @@ public abstract class ShootBase : MonoBehaviour
     /// <summary>
     /// 射击
     /// </summary>
-    public virtual void Shoot(Vector3 origin, Vector3 dest, GameObject target) 
+    public virtual void OnPointDown(Vector3 origin, Vector3 dest, GameObject target) 
     {
-        _curTime = 0;
+    }
+
+    public virtual void OnPointUp(Vector3 origin, Vector3 dest, GameObject target)
+    {
+    }
+
+    public virtual void OnPress(Vector3 origin, Vector3 dest, GameObject target)
+    {
     }
 
     public virtual bool CanShoot() 
@@ -43,8 +50,8 @@ public abstract class ShootBase : MonoBehaviour
             if (rb != null)
             {
                 rb.isKinematic = false;
-                rb.AddExplosionForce(m_config.power, position, m_config.explosionRadius);
-                shard.gameObject.AddComponent<AutoDestruct>().Time = 10.0f;
+                rb.AddExplosionForce(m_config.power, position, m_config.explosionRadius);              
+               // shard.gameObject.AddComponent<AutoDestruct>().Time = 10.0f;
             }
         }
     }

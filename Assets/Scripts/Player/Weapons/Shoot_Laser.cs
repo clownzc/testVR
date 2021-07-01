@@ -9,6 +9,7 @@ public class Shoot_Laser : ShootBase
 {
     private BulletLaser curBullet;
     private GameObject curTarget;
+
     public override void Init()
     {
         Debug.Log("Init Laser!");
@@ -24,13 +25,23 @@ public class Shoot_Laser : ShootBase
         Debug.Log("ActiveWeapon Laser!");
     }
 
-    public override void Shoot(Vector3 origin, Vector3 dest, GameObject target)
+    public override bool CanShoot()
     {
-        curTarget = target;
-        if(curBullet == null)
+        return curBullet == null;
+    }
+
+    public override void OnPointDown(Vector3 origin, Vector3 dest, GameObject target)
+    {
+        
+    }
+
+    public override void OnPress(Vector3 origin, Vector3 dest, GameObject target)
+    {
+        if (curBullet == null && CanShoot())
         {
-            base.Shoot(origin, dest, target);
-            var cell = Instantiate(m_config.prefab, origin, Quaternion.identity, transform);
+            _curTime = 0;
+            curTarget = target;
+            var cell = Instantiate(m_config.prefab, transform);
             curBullet = cell.GetComponent<BulletBase>() as BulletLaser;
             var desc = new MoableDesc()
             {
@@ -46,20 +57,40 @@ public class Shoot_Laser : ShootBase
         }
         else
         {
+            curTarget = target;
             curBullet.Desc._dir = Vector3.Normalize(dest - origin);
             curBullet.Desc._dest = dest;
         }
     }
 
+    public override void OnPointUp(Vector3 origin, Vector3 dest, GameObject target)
+    {
+        Debug.Log("ShootLaser OnPointUp!");
+        if (curBullet != null)
+        {
+            DeleteBullet(curBullet);
+        }
+    }
+
     private void OnHit(BulletBase bullect)
     {
-        Debug.Log($"Hit target :{curTarget}");
         if (curTarget == null) return;
         var breakAble = curTarget.GetComponent<BreakOnTime>();
         if (breakAble != null)
         {
             breakAble.SetSubdivide();
         }
-        Explode(bullect, bullect.Desc._dest);
+
+        var muscleCollision = curTarget.gameObject.GetComponent<RootMotion.Dynamics.MuscleCollisionBroadcaster>();
+        if (muscleCollision != null)
+        {
+            muscleCollision.Hit(100, m_config.power * curBullet.Desc._dir, curBullet.Desc._dest);
+            Explode(bullect, bullect.Desc._dest);
+        }
+        else
+        {
+            Explode(bullect, bullect.Desc._dest);
+        }
+       
     }
 }

@@ -1,0 +1,396 @@
+fileFormatVersion: 2
+guid: afb966103deadca40ba1623717b00f37
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: impact1
+    100004: impact1_0
+    100006: impact1_1
+    100008: impact2
+    100010: impact2_1
+    100012: impact2_2
+    100014: impact2_3
+    100016: impact3
+    100018: impact3_1
+    100020: impact3_2
+    100022: impact3_3
+    100024: impact3_4
+    100026: particle1
+    100028: particle10
+    100030: particle11
+    100032: particle12
+    100034: particle13
+    100036: particle14
+    100038: particle15
+    100040: particle16
+    100042: particle2
+    100044: particle3
+    100046: particle4
+    100048: particle5
+    100050: particle6
+    100052: particle7
+    100054: particle8
+    100056: particle9
+    100058: particles
+    100060: smoke
+    100062: smoke_1
+    100064: smoke_10
+    100066: smoke_11
+    100068: smoke_2
+    100070: smoke_3
+    100072: smoke_4
+    100074: smoke_5
+    100076: smoke_6
+    100078: smoke_7
+    100080: smoke_8
+    100082: smoke_9
+    400000: //RootNode
+    400002: impact1
+    400004: impact1_0
+    400006: impact1_1
+    400008: impact2
+    400010: impact2_1
+    400012: impact2_2
+    400014: impact2_3
+    400016: impact3
+    400018: impact3_1
+    400020: impact3_2
+    400022: impact3_3
+    400024: impact3_4
+    400026: particle1
+    400028: particle10
+    400030: particle11
+    400032: particle12
+    400034: particle13
+    400036: particle14
+    400038: particle15
+    400040: particle16
+    400042: particle2
+    400044: particle3
+    400046: particle4
+    400048: particle5
+    400050: particle6
+    400052: particle7
+    400054: particle8
+    400056: particle9
+    400058: particles
+    400060: smoke
+    400062: smoke_1
+    400064: smoke_10
+    400066: smoke_11
+    400068: smoke_2
+    400070: smoke_3
+    400072: smoke_4
+    400074: smoke_5
+    400076: smoke_6
+    400078: smoke_7
+    400080: smoke_8
+    400082: smoke_9
+    2300000: impact1_0
+    2300002: impact1_1
+    2300004: impact2_1
+    2300006: impact2_2
+    2300008: impact2_3
+    2300010: impact3_1
+    2300012: impact3_2
+    2300014: impact3_3
+    2300016: impact3_4
+    2300018: particle1
+    2300020: particle10
+    2300022: particle11
+    2300024: particle12
+    2300026: particle13
+    2300028: particle14
+    2300030: particle15
+    2300032: particle16
+    2300034: particle2
+    2300036: particle3
+    2300038: particle4
+    2300040: particle5
+    2300042: particle6
+    2300044: particle7
+    2300046: particle8
+    2300048: particle9
+    2300050: smoke_1
+    2300052: smoke_10
+    2300054: smoke_11
+    2300056: smoke_2
+    2300058: smoke_3
+    2300060: smoke_4
+    2300062: smoke_5
+    2300064: smoke_6
+    2300066: smoke_7
+    2300068: smoke_8
+    2300070: smoke_9
+    3300000: impact1_0
+    3300002: impact1_1
+    3300004: impact2_1
+    3300006: impact2_2
+    3300008: impact2_3
+    3300010: impact3_1
+    3300012: impact3_2
+    3300014: impact3_3
+    3300016: impact3_4
+    3300018: particle1
+    3300020: particle10
+    3300022: particle11
+    3300024: particle12
+    3300026: particle13
+    3300028: particle14
+    3300030: particle15
+    3300032: particle16
+    3300034: particle2
+    3300036: particle3
+    3300038: particle4
+    3300040: particle5
+    3300042: particle6
+    3300044: particle7
+    3300046: particle8
+    3300048: particle9
+    3300050: smoke_1
+    3300052: smoke_10
+    3300054: smoke_11
+    3300056: smoke_2
+    3300058: smoke_3
+    3300060: smoke_4
+    3300062: smoke_5
+    3300064: smoke_6
+    3300066: smoke_7
+    3300068: smoke_8
+    3300070: smoke_9
+    4300000: impact1_0
+    4300002: impact1_1
+    4300004: particle1
+    4300006: particle2
+    4300008: particle3
+    4300010: particle4
+    4300012: particle5
+    4300014: particle6
+    4300016: particle7
+    4300018: particle8
+    4300020: particle9
+    4300022: particle10
+    4300024: particle11
+    4300026: particle12
+    4300028: particle13
+    4300030: particle14
+    4300032: particle15
+    4300034: particle16
+    4300036: impact2_1
+    4300038: impact2_2
+    4300040: impact2_3
+    4300042: impact3_1
+    4300044: impact3_2
+    4300046: impact3_3
+    4300048: impact3_4
+    4300050: smoke_1
+    4300052: smoke_2
+    4300054: smoke_3
+    4300056: smoke_4
+    4300058: smoke_5
+    4300060: smoke_6
+    4300062: smoke_7
+    4300064: smoke_8
+    4300066: smoke_9
+    4300068: smoke_10
+    4300070: smoke_11
+    7400000: E_BB_Normal
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: a737d125a65586a49912bbf1a0dd2e23, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: E_BB_Normal
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: impact1
+        weight: 1
+      - path: impact1/impact1_0
+        weight: 1
+      - path: impact1/impact1_1
+        weight: 1
+      - path: impact1/particles
+        weight: 1
+      - path: impact1/particles/particle1
+        weight: 1
+      - path: impact1/particles/particle2
+        weight: 1
+      - path: impact1/particles/particle3
+        weight: 1
+      - path: impact1/particles/particle4
+        weight: 1
+      - path: impact1/particles/particle5
+        weight: 1
+      - path: impact1/particles/particle6
+        weight: 1
+      - path: impact1/particles/particle7
+        weight: 1
+      - path: impact1/particles/particle8
+        weight: 1
+      - path: impact1/particles/particle9
+        weight: 1
+      - path: impact1/particles/particle10
+        weight: 1
+      - path: impact1/particles/particle11
+        weight: 1
+      - path: impact1/particles/particle12
+        weight: 1
+      - path: impact1/particles/particle13
+        weight: 1
+      - path: impact1/particles/particle14
+        weight: 1
+      - path: impact1/particles/particle15
+        weight: 1
+      - path: impact1/particles/particle16
+        weight: 1
+      - path: impact2
+        weight: 1
+      - path: impact2/impact2_1
+        weight: 1
+      - path: impact2/impact2_2
+        weight: 1
+      - path: impact2/impact2_3
+        weight: 1
+      - path: impact3
+        weight: 1
+      - path: impact3/impact3_1
+        weight: 1
+      - path: impact3/impact3_2
+        weight: 1
+      - path: impact3/impact3_3
+        weight: 1
+      - path: impact3/impact3_4
+        weight: 1
+      - path: smoke
+        weight: 1
+      - path: smoke/smoke_1
+        weight: 1
+      - path: smoke/smoke_2
+        weight: 1
+      - path: smoke/smoke_3
+        weight: 1
+      - path: smoke/smoke_4
+        weight: 1
+      - path: smoke/smoke_5
+        weight: 1
+      - path: smoke/smoke_6
+        weight: 1
+      - path: smoke/smoke_7
+        weight: 1
+      - path: smoke/smoke_8
+        weight: 1
+      - path: smoke/smoke_9
+        weight: 1
+      - path: smoke/smoke_10
+        weight: 1
+      - path: smoke/smoke_11
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -37,11 +37,18 @@ public class WeaponController : MonoBehaviour
         m_shoots[m_curSelectIndex].ActiveWeapon();
     }
 
-    public void Shoot(Vector3 origin, Vector3 dest, GameObject target)
+    public void OnPointDown(Vector3 origin, Vector3 dest, GameObject target)
     {
-        if(m_shoots[m_curSelectIndex].CanShoot())
-        {
-            m_shoots[m_curSelectIndex].Shoot(origin, dest, target);
-        }       
+        m_shoots[m_curSelectIndex].OnPointDown(origin, dest, target);
+    }
+
+    public void OnPress(Vector3 origin, Vector3 dest, GameObject target)
+    {
+        m_shoots[m_curSelectIndex].OnPress(origin, dest, target);
+    }
+
+    public void OnPointUp(Vector3 origin, Vector3 dest, GameObject target)
+    {
+        m_shoots[m_curSelectIndex].OnPointUp(origin, dest, target);
     }
 }

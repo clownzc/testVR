@@ -29,8 +29,25 @@ public class MyGun : MonoBehaviour
             var ray = new Ray(myCamera.transform.position, myCamera.transform.forward);
             if (Physics.Raycast(ray, out hit, 100.0f))
             {              
-                weaponController.Shoot(transform.position, hit.point, hit.collider.gameObject);
-               // Explode(hit.point);
+                weaponController.OnPress(transform.position, hit.point, hit.collider.gameObject);
+            }
+        }
+        else if (Input.GetMouseButtonDown(0))
+        {
+            RaycastHit hit;
+            var ray = new Ray(myCamera.transform.position, myCamera.transform.forward);
+            if (Physics.Raycast(ray, out hit, 100.0f))
+            {
+                weaponController.OnPointDown(transform.position, hit.point, hit.collider.gameObject);
+            }
+        }
+        else if (Input.GetMouseButtonUp(0))
+        {
+            RaycastHit hit;
+            var ray = new Ray(myCamera.transform.position, myCamera.transform.forward);
+            if (Physics.Raycast(ray, out hit, 100.0f))
+            {
+                weaponController.OnPointUp(transform.position, hit.point, hit.collider.gameObject);
             }
         }
         if (Input.GetKeyDown(KeyCode.Alpha1))

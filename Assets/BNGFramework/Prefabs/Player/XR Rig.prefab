@@ -574,7 +574,9 @@ MonoBehaviour:
   ControllerSide: 0
   AutoUpdateUITransforms: 1
   cursor: {fileID: 2255670627275077591, guid: cda3e347c37ecf24e89b8cd380c7f9f2, type: 3}
+  MaxDistance: 5
   LineDistanceModifier: 0.8
+  PointerLocalScale: 0.01
   lineRenderer: {fileID: 412880597057349010}
 --- !u!1 &1247141267538704520
 GameObject:
@@ -1469,6 +1471,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1749,6 +1752,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1822,6 +1826,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 1, b: 0.93333334, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2069,6 +2074,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2142,6 +2148,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.5803922}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2343,6 +2350,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2743,8 +2751,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49877b2c8de1d6e4ebc9ca5d8ea02d78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InputSource: 1
-  TrackingOrigin: 2
+  InputSource: 0
+  TrackingSpaceType: 1
   LeftGrip: 0
   LeftGripDown: 0
   RightGrip: 0
@@ -3859,7 +3867,9 @@ MonoBehaviour:
   ControllerSide: 1
   AutoUpdateUITransforms: 1
   cursor: {fileID: 2255670627275077591, guid: cda3e347c37ecf24e89b8cd380c7f9f2, type: 3}
+  MaxDistance: 5
   LineDistanceModifier: 0.8
+  PointerLocalScale: 0.01
   lineRenderer: {fileID: 3165472505434009774}
 --- !u!1 &7276301767836870475
 GameObject:
@@ -4085,6 +4095,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -4158,6 +4169,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -4248,6 +4260,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -4391,11 +4404,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedLocomotion: 1
-  MoveCharacterWithCamera: 1
   RotateCharacterWithCamera: 1
+  MoveCharacterWithCamera: 1
   TrackingSpace: {fileID: 5117709272728089495}
   CameraRig: {fileID: 5117709272728151533}
   CenterEyeAnchor: {fileID: 5117709272728151529}
+  GrippingClimbable: 0
   GravityEnabled: 1
   GravityAmount: 7.1
   GroundedLayers:
@@ -4404,17 +4418,16 @@ MonoBehaviour:
   DistanceFromGround: 0
   MinimumCapsuleHeight: 0.4
   MaximumCapsuleHeight: 3
+  CharacterControllerYOffset: -0.025
+  MinElevation: -100
+  MaxElevation: 5000
   ClimbingCapsuleHeight: 0.5
   ClimbingCapsuleCenter: -0.25
   LastTeleportTime: 0
-  CharacterControllerYOffset: -0.025
+  LastPlayerMoveTime: 0
   CameraHeight: 0
   ElevateCameraIfNoHMDPresent: 0
   ElevateCameraHeight: 1.65
-  MinElevation: -100
-  MaxElevation: 5000
-  GrippingClimbable: 0
-  LastPlayerMoveTime: 0
 --- !u!143 &9166498488697346858
 CharacterController:
   m_ObjectHideFlags: 0
@@ -4469,8 +4482,8 @@ MonoBehaviour:
   StrafeSprintSpeed: 1.25
   ApplyGravity: 1
   GravityModifier: 1
-  JumpForce: 3
   JumpInput: 00000000
+  JumpForce: 3
   AirControl: 1
   AirControlSpeed: 1
   AllowKeyboardInputs: 1

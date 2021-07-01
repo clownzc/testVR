@@ -20,9 +20,10 @@ public class Shoot_lightfire : ShootBase
         Debug.Log("ActiveWeapon light fire!");
     }
 
-    public override void Shoot(Vector3 origin, Vector3 dest, GameObject target)
+    public override void OnPointUp (Vector3 origin, Vector3 dest, GameObject target)
     {
-        base.Shoot(origin, dest, target);
+        if (CanShoot() == false) return;
+        _curTime = 0;
         var cell = Instantiate(m_config.prefab, origin, Quaternion.identity);
         var bullect = cell.GetComponent<BulletBase>();
         var desc = new MoableDesc()

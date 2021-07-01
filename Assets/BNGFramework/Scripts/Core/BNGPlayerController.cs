@@ -327,25 +327,8 @@ namespace BNG {
             if(!InputBridge.Instance.HMDActive && ElevateCameraIfNoHMDPresent) {
                 yPos += ElevateCameraHeight;
             }
-            var z = CameraRig.transform.localPosition.z;
-            if (Input.GetKey(KeyCode.W))
-            {
-                z = CameraRig.transform.localPosition.z + 1 * Time.deltaTime;
-            }
-            if (Input.GetKey(KeyCode.S))
-            {
-                z = CameraRig.transform.localPosition.z - 1 * Time.deltaTime;
-            }
-            var x = CameraRig.transform.localPosition.x;
-            if (Input.GetKey(KeyCode.D))
-            {
-                x = CameraRig.transform.localPosition.x + 1 * Time.deltaTime;
-            }
-            if (Input.GetKey(KeyCode.A))
-            {
-                x = CameraRig.transform.localPosition.x - 1 * Time.deltaTime;
-            }
-            CameraRig.transform.localPosition = new Vector3(x, yPos, z);
+
+            CameraRig.transform.localPosition = new Vector3(CameraRig.transform.localPosition.x, yPos, CameraRig.transform.localPosition.z);
         }
 
         public virtual void UpdateCharacterHeight() {
