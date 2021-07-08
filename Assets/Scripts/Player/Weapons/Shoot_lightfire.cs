@@ -20,23 +20,29 @@ public class Shoot_lightfire : ShootBase
         Debug.Log("ActiveWeapon light fire!");
     }
 
-    public override void OnPointUp (Vector3 origin, Vector3 dest, GameObject target)
+    public override void OnPointUp ()
     {
-        if (CanShoot() == false) return;
-        _curTime = 0;
-        var cell = Instantiate(m_config.prefab, origin, Quaternion.identity);
-        var bullect = cell.GetComponent<BulletBase>();
-        var desc = new MoableDesc()
+        RaycastHit hit;
+        var sightObj = m_config.sight != null ? m_config.sight : transform;
+        var ray = new Ray(sightObj.position, sightObj.forward);
+        if (Physics.Raycast(ray, out hit, 100.0f))
         {
-            _origin = origin,
-            _dest = dest,
-            _dir = Vector3.Normalize(dest - origin),
-            _speed = m_config.speed,
-            _life = m_config.life,
-            _collisionEnterCallback = OnHit
-        };
-        bullect.StartMove(desc);
-        m_bullets.Add(bullect);
+            if (CanShoot() == false) return;
+            _curTime = 0;
+            var cell = Instantiate(m_config.prefab, sightObj.position, Quaternion.identity);
+            var bullect = cell.GetComponent<BulletBase>();
+            var desc = new MoableDesc()
+            {
+                _origin = sightObj.position,
+                _dest = hit.point,
+                _dir = Vector3.Normalize(hit.point - sightObj.position),
+                _speed = m_config.speed,
+                _life = m_config.life,
+                _collisionEnterCallback = OnHit
+            };
+            bullect.StartMove(desc);
+            m_bullets.Add(bullect);
+        }
     }
 
     private void OnHit(BulletBase bullect, Collision collision)

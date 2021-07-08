@@ -82,8 +82,6 @@ namespace Battle
 
 		private void TakeDamage(Vector3 pos, float damage, Collision collision, Muscle muscle)
 		{
-			print("take damage: " + damage);
-			
 			// 击中身体音效;
 			Messenger.Broadcast("PlaySoundRandom", AudioList.BodyHit, pos);
 

@@ -5,8 +5,8 @@ using Bytesized;
 
 public abstract class ShootBase : MonoBehaviour
 {
-    [SerializeField]
-    protected ShootConfig m_config;
+    [SerializeField] protected ShootConfig m_config;
+   
     protected float _curTime;
 
     protected List<BulletBase> m_bullets = new List<BulletBase>();
@@ -25,15 +25,15 @@ public abstract class ShootBase : MonoBehaviour
     /// <summary>
     /// 射击
     /// </summary>
-    public virtual void OnPointDown(Vector3 origin, Vector3 dest, GameObject target) 
+    public virtual void OnPointDown() 
     {
     }
 
-    public virtual void OnPointUp(Vector3 origin, Vector3 dest, GameObject target)
+    public virtual void OnPointUp()
     {
     }
 
-    public virtual void OnPress(Vector3 origin, Vector3 dest, GameObject target)
+    public virtual void OnPress()
     {
     }
 
@@ -74,4 +74,12 @@ public abstract class ShootBase : MonoBehaviour
         m_bullets.Remove(bullet);
         bullet.EndMove();
     } 
+
+    public int GetHitLayer()
+    {
+        int layA = LayerMask.NameToLayer("BreakAble");
+        int layB = LayerMask.NameToLayer("Enemy");
+        int layC = LayerMask.NameToLayer("Default");
+        return 1 << layA | 1 << layB | 1 << layC;
+    }
 }

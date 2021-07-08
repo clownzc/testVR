@@ -65,6 +65,7 @@ public class BulletLaser : BulletBase
 
     private void LoopShooting()
     {
+        laser.transform.position = _desc._origin;
         laser.transform.up = _desc._dir;
         hitPointEffect.transform.position = _desc._dest - _desc._dir;
 

@@ -15,4 +15,6 @@ public class ShootConfig
 
     public float power;
     public float powerDecayByTime;//战斗力随时间下降
+
+    public Transform sight;//瞄准星参考物
 }
