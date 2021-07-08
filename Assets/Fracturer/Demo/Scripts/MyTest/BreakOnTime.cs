@@ -15,6 +15,8 @@ public class BreakOnTime : MonoBehaviour
     public bool OnlySurface;
     [Tooltip("Layer to set shards on when instatiating them. Useful for making raycasts against them.")]
     public LayerMask ShardLayer;
+    [Tooltip("发生碰撞时造成摧毁的速度平方值.")]
+    private int breakRelativeVelocitySqrMagnitude = 20;
 
     private MeshRenderer myRender;
     private Collider oldCollider;//原始碰撞器
@@ -24,6 +26,16 @@ public class BreakOnTime : MonoBehaviour
     {
         myRender = this.GetComponent<MeshRenderer>();
         oldCollider = this.GetComponent<Collider>();
+    }
+
+    //发生碰撞
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (hasSubdivide) return;
+        if (collision.relativeVelocity.sqrMagnitude > breakRelativeVelocitySqrMagnitude)
+        {
+            SetSubdivide();
+        }
     }
 
     public void SetSubdivide()
