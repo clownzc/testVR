@@ -69,17 +69,9 @@
       "depth": 0,
       "source": "builtin",
       "dependencies": {
-        "com.unity.modules.ui": "1.0.0"
+        "com.unity.modules.ui": "1.0.0",
+        "com.unity.modules.imgui": "1.0.0"
       }
-    },
-    "com.unity.xr.interactionsubsystems": {
-      "version": "1.0.1",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.subsystemregistration": "1.0.5"
-      },
-      "url": "https://packages.unity.cn"
     },
     "com.unity.xr.legacyinputhelpers": {
       "version": "2.1.4",
@@ -98,22 +90,18 @@
       },
       "url": "https://packages.unity.cn"
     },
+    "com.unity.xr.oculus": {
+      "version": "1.5.1",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.xr.management": "3.2.13",
+        "com.unity.ugui": "1.0.0"
+      },
+      "url": "https://packages.unity.cn"
+    },
     "com.unity.xr.oculus.android": {
       "version": "2.38.6",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://packages.unity.cn"
-    },
-    "com.unity.xr.oculus.standalone": {
-      "version": "2.38.4",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://packages.unity.cn"
-    },
-    "com.unity.xr.openvr.standalone": {
-      "version": "2.0.5",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
