@@ -89,7 +89,6 @@ namespace RootMotion.Dynamics {
 		void OnCollisionEnter(Collision collision) {
 			if (puppetMaster == null) return;
 			if (collision.collider.transform.root == transform.root) return; // @todo make sure characters are not stacked to the same root
-			
 			foreach (BehaviourBase behaviour in puppetMaster.behaviours) {
 				behaviour.OnMuscleCollision(new MuscleCollision(muscleIndex, collision));
 			}
