@@ -7,12 +7,6 @@ using Bytesized;
 /// </summary>
 public class MyGun : MonoBehaviour
 {
-    public LayerMask ShardLayers;
-    public float ExplosionRadius;
-    public float ExplosionForce;
-
-    [SerializeField]
-    private Camera myCamera;
     [SerializeField]
     private WeaponController weaponController;
 
