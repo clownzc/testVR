@@ -17,6 +17,8 @@ public class MyGun : MonoBehaviour
 
     void Update()
     {
+
+#if UNITY_EDITOR
         if (Input.GetMouseButton(0))
         {
             weaponController.OnPress();
@@ -33,5 +35,24 @@ public class MyGun : MonoBehaviour
         {
             weaponController.SwitchShooter();
         }
+#else
+         if(OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
+         {
+             weaponController.OnPointDown();
+         }
+         else if(OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger))
+         {
+             weaponController.OnPress();
+         }
+         else if (OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger))
+         {
+             weaponController.OnPointUp();
+         }
+         else if (OVRInput.GetUp(OVRInput.Button.PrimaryHandTrigger))
+         {
+             weaponController.SwitchShooter();
+         }
+#endif
     }
+
 }

@@ -22,13 +22,13 @@ public class BreakOnTime : MonoBehaviour
     private Collider oldCollider;//原始碰撞器
     private bool hasSubdivide = false;//已经分割完成
 
-    private void Start()
+    private void Awake()
     {
         myRender = this.GetComponent<MeshRenderer>();
         oldCollider = this.GetComponent<Collider>();
     }
 
-    //发生碰撞
+ /*   //发生碰撞
     private void OnCollisionEnter(Collision collision)
     {
         if (hasSubdivide) return;
@@ -36,7 +36,7 @@ public class BreakOnTime : MonoBehaviour
         {
             SetSubdivide();
         }
-    }
+    }*/
 
     public void SetSubdivide()
     {
