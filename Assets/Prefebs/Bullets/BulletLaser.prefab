@@ -168,9 +168,13 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 192112, guid: e05c716fb25e1d044bf09cab1d86a74e, type: 3}
+    - target: {fileID: 157826, guid: e05c716fb25e1d044bf09cab1d86a74e, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 192112, guid: e05c716fb25e1d044bf09cab1d86a74e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 196772, guid: e05c716fb25e1d044bf09cab1d86a74e, type: 3}
       propertyPath: m_IsActive
@@ -231,6 +235,22 @@ PrefabInstance:
     - target: {fileID: 455368, guid: e05c716fb25e1d044bf09cab1d86a74e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19818208, guid: e05c716fb25e1d044bf09cab1d86a74e, type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19818208, guid: e05c716fb25e1d044bf09cab1d86a74e, type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19818208, guid: e05c716fb25e1d044bf09cab1d86a74e, type: 3}
+      propertyPath: InitialModule.startRotationX.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19818208, guid: e05c716fb25e1d044bf09cab1d86a74e, type: 3}
+      propertyPath: InitialModule.startRotationY.minMaxState
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 19888002, guid: e05c716fb25e1d044bf09cab1d86a74e, type: 3}
       propertyPath: InitialModule.startSizeY.minMaxState

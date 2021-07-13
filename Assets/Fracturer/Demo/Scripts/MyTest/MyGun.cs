@@ -47,7 +47,7 @@ public class MyGun : MonoBehaviour
          {
              weaponController.OnPointUp();
          }
-         else if (OVRInput.GetUp(OVRInput.Button.PrimaryThumbstickDown))
+         else if (OVRInput.GetUp(OVRInput.Button.PrimaryHandTrigger))
          {
              weaponController.SwitchShooter();
          }
