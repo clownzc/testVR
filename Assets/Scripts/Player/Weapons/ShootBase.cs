@@ -42,8 +42,9 @@ public abstract class ShootBase : MonoBehaviour
         return _curTime > m_config.interval;
     }
 
-    public virtual void Explode(BulletBase bullect, Vector3 position)
+    public virtual void Explode(BulletBase bullect, Vector3 position, bool autoDelete)
     {
+        Debug.LogError($"1111111111{m_config.shardLayers}");
         foreach (var shard in Physics.OverlapSphere(position, m_config.explosionRadius, m_config.shardLayers))
         {
             var rb = shard.GetComponent<Rigidbody>();
@@ -51,7 +52,7 @@ public abstract class ShootBase : MonoBehaviour
             {
                 rb.isKinematic = false;
                 rb.AddExplosionForce(m_config.power, position, m_config.explosionRadius);              
-               // shard.gameObject.AddComponent<AutoDestruct>().Time = 10.0f;
+                if(autoDelete) shard.gameObject.AddComponent<AutoDestruct>().Time = 3.0f;
             }
         }
     }
@@ -82,4 +83,9 @@ public abstract class ShootBase : MonoBehaviour
         int layC = LayerMask.NameToLayer("Default");
         return 1 << layA | 1 << layB | 1 << layC;
     }
+/*
+    public bool IsAutoDeleteLayer(int layer)
+    {
+        return layer == LayerMask.NameToLayer("BreakAble");
+    }*/
 }

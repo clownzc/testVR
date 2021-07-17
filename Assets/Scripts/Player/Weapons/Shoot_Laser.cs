@@ -84,7 +84,8 @@ public class Shoot_Laser : ShootBase
     {
         if (curTarget == null) return;
         var breakAble = curTarget.GetComponent<BreakOnTime>();
-        if (breakAble != null)
+        bool canBreak = breakAble != null;
+        if (canBreak)
         {
             breakAble.SetSubdivide();
         }
@@ -93,11 +94,11 @@ public class Shoot_Laser : ShootBase
         if (muscleCollision != null)
         {
             muscleCollision.Hit(100, m_config.power * curBullet.Desc._dir, curBullet.Desc._dest);
-            Explode(bullect, bullect.Desc._dest);
+            Explode(bullect, bullect.Desc._dest, false);
         }
         else
         {
-            Explode(bullect, bullect.Desc._dest);
+            Explode(bullect, bullect.Desc._dest, canBreak);
         }
        
     }

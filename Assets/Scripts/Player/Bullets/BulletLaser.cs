@@ -52,7 +52,8 @@ public class BulletLaser : BulletBase
     private void LoopStart()
     {
         playTime += Time.deltaTime;
-        startLight.transform.up = _desc._dir;        
+        startLight.transform.position = _desc._origin;
+        startLight.transform.up = _desc._dir;     
         if (playTime > startLightTime)
         {
             playTime = 0;

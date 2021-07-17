@@ -48,19 +48,20 @@ public class Shoot_rock : ShootBase
     private void OnHit(BulletBase bullect, Collision collision)
     {
         var breakAble = collision.collider.gameObject.GetComponent<BreakOnTime>();
-        if (breakAble != null)
+        bool canBreak = breakAble != null;
+        Debug.LogError($"breakAble:{breakAble} canBreak:{canBreak}");
+        if (canBreak)
         {
             breakAble.SetSubdivide();
         }
 
         ContactPoint contact = collision.contacts[0];
-        Quaternion rot = Quaternion.FromToRotation(Vector3.up, contact.normal);
         Vector3 pos = contact.point;
-        Explode(bullect, pos);
+        Explode(bullect, pos, canBreak);
        // DeleteBullet(bullect);
     }
 
-    public override void Explode(BulletBase bullect, Vector3 position)
+    public override void Explode(BulletBase bullect, Vector3 position, bool autoDelete)
     {
         foreach (var shard in Physics.OverlapSphere(position, m_config.explosionRadius, m_config.shardLayers))
         {
@@ -70,7 +71,7 @@ public class Shoot_rock : ShootBase
                 rb.isKinematic = false;
                 var power = bullect.HasLife ? m_config.power - bullect.CurLife * m_config.powerDecayByTime : 0;
                 rb.AddExplosionForce(power, position, m_config.explosionRadius);
-                //shard.gameObject.AddComponent<AutoDestruct>().Time = 10.0f;
+                if(autoDelete) shard.gameObject.AddComponent<AutoDestruct>().Time = 3.0f;
             }
         }
     }

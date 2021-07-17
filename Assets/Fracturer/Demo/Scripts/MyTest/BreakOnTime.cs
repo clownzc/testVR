@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using csDelaunay;
+using Bytesized;
 /// <summary>
 /// 实时的毁伤，在被打到的瞬间进行分割
 /// </summary>
@@ -27,16 +28,7 @@ public class BreakOnTime : MonoBehaviour
         myRender = this.GetComponent<MeshRenderer>();
         oldCollider = this.GetComponent<Collider>();
     }
-
- /*   //发生碰撞
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (hasSubdivide) return;
-        if (collision.relativeVelocity.sqrMagnitude > breakRelativeVelocitySqrMagnitude)
-        {
-            SetSubdivide();
-        }
-    }*/
+   
 
     public void SetSubdivide()
     {

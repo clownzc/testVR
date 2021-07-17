@@ -49,14 +49,15 @@ public class Shoot_lightfire : ShootBase
     {
         Debug.Log($"Hit target :{collision.gameObject}");
         var breakAble = collision.collider.gameObject.GetComponent<BreakOnTime>();
-        if (breakAble != null)
+        bool canBreak = breakAble != null;
+        if (canBreak)
         {
             breakAble.SetSubdivide();
         }
 
         ContactPoint contact = collision.contacts[0];
-        Quaternion rot = Quaternion.FromToRotation(Vector3.up, contact.normal);
+        //Quaternion rot = Quaternion.FromToRotation(Vector3.up, contact.normal);
         Vector3 pos = contact.point;
-        Explode(bullect, pos);
+        Explode(bullect, pos, canBreak);
     }
 }

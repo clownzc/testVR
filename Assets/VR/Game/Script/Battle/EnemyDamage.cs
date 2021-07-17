@@ -34,10 +34,19 @@ namespace Battle
 			TakeDamage(hit.position, hit.unPin, null, null);
 		}
 
+		/// <summary>
+		/// 是否是可以造成伤害的层级
+		/// </summary>
+		/// <returns></returns>
+		private bool IsDamgeLayer(int layer)
+		{
+			return layer == LayerMask.NameToLayer("Bullet") || layer == LayerMask.NameToLayer("Weapon");
+        }
+
 		public override void OnMuscleCollisionBehaviour(MuscleCollision m)
 		{
 			if (m.isStay) return;
-
+			if (IsDamgeLayer(m.collision.gameObject.layer) == false) return;
 			var impulse = m.collision.impulse.magnitude;
 			if (impulse <= _damageImpulse) return;
 
