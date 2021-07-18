@@ -4,8 +4,9 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: WarriorArmorColor
   m_Shader: {fileID: 4800000, guid: bb46760549aa5014697e05ab05cf5e6c, type: 3}
   m_ShaderKeywords: _EMISSION _FOG _NORMALMAP _TEX_BLEACH_ON
@@ -111,7 +112,7 @@ Material:
     - _EmissionMaskMin: 0
     - _EmissionMaskMul: 3
     - _EmissionMode: 0
-    - _EmissionMul: 1
+    - _EmissionMul: 0.49
     - _FogMode: 1
     - _FresnelAdd: 0
     - _FresnelAlphaAdd: 0
@@ -161,7 +162,7 @@ Material:
     - _tex_bleach: 0.3215686
     m_Colors:
     - _AlbedoTint: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.588, g: 0.588, b: 0.588, a: 1}
+    - _Color: {r: 1, g: 0.19412746, b: 0.06132078, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _FresnelColor: {r: 0, g: 0, b: 0, a: 1}
     - _Layer1_Tint: {r: 0.5, g: 0.5, b: 0.5, a: 1}

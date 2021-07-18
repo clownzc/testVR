@@ -44,7 +44,6 @@ public abstract class ShootBase : MonoBehaviour
 
     public virtual void Explode(BulletBase bullect, Vector3 position, bool autoDelete)
     {
-        Debug.LogError($"1111111111{m_config.shardLayers}");
         foreach (var shard in Physics.OverlapSphere(position, m_config.explosionRadius, m_config.shardLayers))
         {
             var rb = shard.GetComponent<Rigidbody>();

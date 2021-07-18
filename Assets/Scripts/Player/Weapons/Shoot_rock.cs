@@ -57,7 +57,7 @@ public class Shoot_rock : ShootBase
 
         ContactPoint contact = collision.contacts[0];
         Vector3 pos = contact.point;
-        Explode(bullect, pos, canBreak);
+        Explode(bullect, pos, false);
        // DeleteBullet(bullect);
     }
 

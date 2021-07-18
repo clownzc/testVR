@@ -93,7 +93,7 @@ public class Shoot_Laser : ShootBase
         var muscleCollision = curTarget.gameObject.GetComponent<RootMotion.Dynamics.MuscleCollisionBroadcaster>();
         if (muscleCollision != null)
         {
-            muscleCollision.Hit(100, m_config.power * curBullet.Desc._dir, curBullet.Desc._dest);
+            muscleCollision.Hit(50, m_config.power * curBullet.Desc._dir, curBullet.Desc._dest);
             Explode(bullect, bullect.Desc._dest, false);
         }
         else
