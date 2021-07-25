@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Bytesized;
@@ -7,8 +8,18 @@ using Bytesized;
 /// </summary>
 public class MyGun : MonoBehaviour
 {
+    [Serializable]
+    public class InputConfig
+    {
+        public OVRInput.Button buttonShoot = OVRInput.Button.PrimaryIndexTrigger;
+        public OVRInput.Button butonSwitchGun = OVRInput.Button.PrimaryHandTrigger;
+
+    }
+
     [SerializeField]
     private WeaponController weaponController;
+    [SerializeField]
+    private InputConfig inputConfig;
 
     private void Start()
     {
@@ -35,19 +46,19 @@ public class MyGun : MonoBehaviour
             weaponController.SwitchShooter();
         }
 
-         if(OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
+         if(OVRInput.GetDown(inputConfig.buttonShoot))
          {
              weaponController.OnPointDown();
          }
-         else if(OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger))
+         else if(OVRInput.Get(inputConfig.buttonShoot))
          {
              weaponController.OnPress();
          }
-         else if (OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger))
+         else if (OVRInput.GetUp(inputConfig.buttonShoot))
          {
              weaponController.OnPointUp();
          }
-         else if (OVRInput.GetUp(OVRInput.Button.PrimaryHandTrigger))
+         else if (OVRInput.GetUp(inputConfig.butonSwitchGun))
          {
              weaponController.SwitchShooter();
          }

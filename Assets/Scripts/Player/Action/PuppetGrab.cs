@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using RootMotion.Dynamics;
@@ -7,10 +8,17 @@ using RootMotion.Dynamics;
 /// </summary>
 public class PuppetGrab : MonoBehaviour
 {
+	[Serializable]
+	public class InputConfig
+	{
+		public OVRInput.Button buttonGrabing = OVRInput.Button.One;
+	}
 	[Tooltip("The layers we wish to grab (optimization).")]
 	public LayerMask grabLayer;
 	[SerializeField] Transform anchor;//跟随的物体
+	[SerializeField] InputConfig inputConfig;
 
+	private bool grabing;//正在尝试抓
 	private bool grabbed;
 	private Rigidbody r;
 	private Collider c;
@@ -30,6 +38,7 @@ public class PuppetGrab : MonoBehaviour
 
 	void OnCollisionEnter(Collision collision)
 	{
+		if (grabing == false) return;
 		if (grabbed) return; // If we have not grabbed anything yet...
 		if (Time.time < nextGrabTime) return; // ...and enough time has passed since the last release...
 		if (LayerUtil.IsInLayerMask(collision.collider.gameObject, grabLayer) == false) return; // ...and the collider is on the right layer...
@@ -88,8 +97,14 @@ public class PuppetGrab : MonoBehaviour
 		{
 			ReleasePuppet();
 		}
-		if (OVRInput.GetUp(OVRInput.Button.Two))
+
+		if (OVRInput.GetDown(inputConfig.buttonGrabing))
 		{
+			grabing = true;
+		}
+		else if (OVRInput.GetUp(inputConfig.buttonGrabing))
+		{
+			grabing = false;
 			ReleasePuppet();
 		}
 	}
