@@ -26,12 +26,15 @@ public class MoveController : MonoBehaviour
         transform.Translate(v, 0, h);
 
         //相机随着视野移动
-        float X = Input.GetAxis("Mouse X") * camRotatespeed;
-        float Y = Input.GetAxis("Mouse Y") * camRotatespeed;
-        camTrans.localRotation = camTrans.localRotation * Quaternion.Euler(-Y, 0, 0);
-        transform.localRotation = transform.localRotation * Quaternion.Euler(0, X, 0);
+        if(Input.GetMouseButton(1))
+        {
+            float X = Input.GetAxis("Mouse X") * camRotatespeed;
+            float Y = Input.GetAxis("Mouse Y") * camRotatespeed;
+            camTrans.localRotation = camTrans.localRotation * Quaternion.Euler(-Y, 0, 0);
+            transform.localRotation = transform.localRotation * Quaternion.Euler(0, X, 0);
+        }
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             vrControllerl.Jump();
         }

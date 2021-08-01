@@ -82,9 +82,5 @@ public abstract class ShootBase : MonoBehaviour
         int layC = LayerMask.NameToLayer("Default");
         return 1 << layA | 1 << layB | 1 << layC;
     }
-/*
-    public bool IsAutoDeleteLayer(int layer)
-    {
-        return layer == LayerMask.NameToLayer("BreakAble");
-    }*/
+
 }

@@ -90,15 +90,17 @@ public class PuppetGrab : MonoBehaviour
 	{
 		transform.position = anchor.position;
 		transform.rotation = anchor.rotation;
-		if (!grabbed) return;
-
-		// Releasing the other puppet, restoring the initial state
 		if (Input.GetKeyDown(KeyCode.X))
 		{
-			ReleasePuppet();
+			grabing = true;
+		}
+        else if (Input.GetKeyUp(KeyCode.X))
+        {
+            grabing = false;
+            ReleasePuppet();
 		}
 
-		if (OVRInput.GetDown(inputConfig.buttonGrabing))
+        if (OVRInput.GetDown(inputConfig.buttonGrabing))
 		{
 			grabing = true;
 		}
@@ -114,6 +116,7 @@ public class PuppetGrab : MonoBehaviour
 	/// </summary>
 	private void ReleasePuppet()
 	{
+		if (grabbed == false) return;
 		Destroy(joint);
 		r.mass /= massMlp;
 		Physics.IgnoreCollision(c, otherCollider, false);

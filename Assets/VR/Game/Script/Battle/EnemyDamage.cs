@@ -119,8 +119,7 @@ namespace Battle
 			}
 
 			SetImmunity();
-
-			print("damage: " + damage + ", " + ", " + _loseBalanceImpulse);
+			
 			if (collision == null || muscle == null) return;//先不处理激光的其他效果
 
 			var chopped = false;
@@ -129,8 +128,8 @@ namespace Battle
 			{
 				if (damage > choppable.chopThreshold)
 				{
-					var weapon = collision.gameObject.GetComponentInParent<Weapon>();
-					if (weapon != null && weapon.chop)
+					//var weapon = collision.gameObject.GetComponentInParent<Weapon>();
+					if (true)//(weapon != null && weapon.chop)
 					{
 						var result = _enemy.Chop(choppable, collision, collision.gameObject);
 						if (result)

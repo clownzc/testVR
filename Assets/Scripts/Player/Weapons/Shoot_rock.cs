@@ -49,7 +49,6 @@ public class Shoot_rock : ShootBase
     {
         var breakAble = collision.collider.gameObject.GetComponent<BreakOnTime>();
         bool canBreak = breakAble != null;
-        Debug.LogError($"breakAble:{breakAble} canBreak:{canBreak}");
         if (canBreak)
         {
             breakAble.SetSubdivide();
@@ -57,6 +56,7 @@ public class Shoot_rock : ShootBase
 
         ContactPoint contact = collision.contacts[0];
         Vector3 pos = contact.point;
+        WeaponUtil.DestructBuild(collision.collider.gameObject, pos);
         Explode(bullect, pos, false);
        // DeleteBullet(bullect);
     }
@@ -71,8 +71,9 @@ public class Shoot_rock : ShootBase
                 rb.isKinematic = false;
                 var power = bullect.HasLife ? m_config.power - bullect.CurLife * m_config.powerDecayByTime : 0;
                 rb.AddExplosionForce(power, position, m_config.explosionRadius);
-                if(autoDelete) shard.gameObject.AddComponent<AutoDestruct>().Time = 3.0f;
+                if (autoDelete) shard.gameObject.AddComponent<AutoDestruct>().Time = 3.0f;
             }
         }
     }
+
 }

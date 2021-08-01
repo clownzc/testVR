@@ -58,6 +58,8 @@ public class Shoot_lightfire : ShootBase
         ContactPoint contact = collision.contacts[0];
         //Quaternion rot = Quaternion.FromToRotation(Vector3.up, contact.normal);
         Vector3 pos = contact.point;
+        WeaponUtil.DestructBuild(collision.collider.gameObject, pos);
         Explode(bullect, pos, canBreak);
+        DeleteBullet(bullect);
     }
 }

@@ -44,7 +44,6 @@ public class BulletLaser : BulletBase
 
     private void ChangeState(State newState, Action loop)
     {
-        Debug.Log($"Bullet ChangeState :{newState}");
         curState = newState;
         loopFunc = loop;
     }

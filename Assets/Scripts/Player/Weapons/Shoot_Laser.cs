@@ -73,7 +73,6 @@ public class Shoot_Laser : ShootBase
 
     public override void OnPointUp()
     {
-        Debug.Log("ShootLaser OnPointUp!");
         if (curBullet != null)
         {
             DeleteBullet(curBullet);
@@ -94,10 +93,12 @@ public class Shoot_Laser : ShootBase
         if (muscleCollision != null)
         {
             muscleCollision.Hit(50, m_config.power * curBullet.Desc._dir, curBullet.Desc._dest);
+          
             Explode(bullect, bullect.Desc._dest, false);
         }
         else
         {
+            WeaponUtil.DestructBuild(curTarget, curBullet.Desc._dest);
             Explode(bullect, bullect.Desc._dest, canBreak);
         }
        

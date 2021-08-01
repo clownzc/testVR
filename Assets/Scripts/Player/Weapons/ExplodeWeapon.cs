@@ -23,6 +23,7 @@ public class ExplodeWeapon : MonoBehaviour
        if (autio) autio.Play();
         ContactPoint contact = collision.contacts[0];
         Vector3 pos = contact.point;
+        WeaponUtil.DestructBuild(collision.collider.gameObject, pos);
         Explode(collision.relativeVelocity.magnitude * powerScale, pos);
     }
 
