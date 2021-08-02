@@ -7,7 +7,9 @@ public class WeaponUtil
     //建筑摧毁
     public static void DestructBuild(GameObject shard, Vector3 position)
     {
-        //激活frac刚体层
+        //激活frac刚体层  
+        int layerBuild = LayerMask.NameToLayer("Build");
+        if (shard.layer != layerBuild) return;
         int layer = LayerMask.NameToLayer("BreakAble");
         for (int i = 0; i < shard.transform.childCount; ++i)
         {
