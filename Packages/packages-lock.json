@@ -30,6 +30,41 @@
       "dependencies": {},
       "url": "https://packages.unity.cn"
     },
+    "com.unity.postprocessing": {
+      "version": "2.2.2",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.cn"
+    },
+    "com.unity.render-pipelines.core": {
+      "version": "7.3.1",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.ugui": "1.0.0"
+      },
+      "url": "https://packages.unity.cn"
+    },
+    "com.unity.render-pipelines.universal": {
+      "version": "7.1.6",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.render-pipelines.core": "7.1.6",
+        "com.unity.shadergraph": "7.1.6"
+      },
+      "url": "https://packages.unity.cn"
+    },
+    "com.unity.shadergraph": {
+      "version": "7.3.1",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.render-pipelines.core": "7.3.1"
+      },
+      "url": "https://packages.unity.cn"
+    },
     "com.unity.subsystemregistration": {
       "version": "1.0.6",
       "depth": 1,
