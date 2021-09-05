@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialization: 1
-  simulationType: 1
+  simulationType: 2
   objectType: 0
   demolitionType: 3
   physics:
@@ -217,13 +217,13 @@ MonoBehaviour:
     collect: 0
     multiplier: 1
   fading:
-    onDemolition: 1
-    onActivation: 0
+    onDemolition: 0
+    onActivation: 1
     lifeType: 4
-    lifeTime: 7
-    lifeVariation: 3
-    fadeType: 0
-    fadeTime: 5
+    lifeTime: 3
+    lifeVariation: 1
+    fadeType: 3
+    fadeTime: 2
     sizeFilter: 0
   reset:
     transform: 1
